@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Meu Amor</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #ffe6f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+  
+      h2 {
+        color: #ff4d88;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+  
+      .login-box {
+        background-color: white;
+        padding: 30px 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+  
+      input[type="text"],
+      input[type="password"] {
+        padding: 12px;
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+  
+      button {
+        background-color: #ff4d88;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1rem;
+      }
+  
+      button:hover {
+        background-color: #e6005c;
+      }
+  
+      .error {
+        color: red;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+  
+      @media (max-width: 400px) {
+        .login-box {
+          padding: 20px 15px;
+        }
+  
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+<body>
+  <div class="login-box">
+    <h2>Logue aqui, se vc for meu amor ❤</h2>
+    
+    <input type="text" id="username" placeholder="Usuário"><br>
+    <input type="password" id="password" placeholder="Senha"><br>
+    <button onclick="checkLogin()">Entrar</button>
+    
+    <div class="error" id="error-msg"></div>
+  </div>
+
+  <script>
+    function checkLogin() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      const error = document.getElementById('error-msg');
+
+      if (user === 'amor1' && pass === '03amovc') {
+        window.location.href = "surpresa.html"; // redireciona para outra página
+      } else {
+        error.textContent = "Usuário ou senha incorretos 😢";
+      }
+    }
+  </script>
+</body>
+</html>
